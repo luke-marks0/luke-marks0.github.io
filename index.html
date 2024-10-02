@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luke Marks - Personal Website</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-        
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: 'Montserrat', sans-serif;
             background-color: #ffffff;
             color: #000000;
             overflow-x: hidden;
@@ -35,24 +33,6 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
-        }
-        .torus {
-            width: 80px;
-            height: 80px;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: rotate 10s infinite linear;
-            margin: 0 30px;
-        }
-        .ring {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #000000;
-            border-radius: 50%;
-            transform-style: preserve-3d;
         }
         .title {
             font-weight: 700;
@@ -79,37 +59,27 @@
             border-bottom: 1px solid #000000;
             padding-bottom: 5px;
         }
-        @keyframes rotate {
-            0% { transform: rotateX(0deg) rotateY(0deg); }
-            100% { transform: rotateX(360deg) rotateY(360deg); }
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        @media (max-width: 600px) {
+            .title {
+                font-size: 1.8em;
+            }
+            .description {
+                font-size: 1em;
+                padding: 5px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="scene">
         <div class="content">
-            <div class="shape-container">
-                <div class="torus">
-                    <script>
-                        for (let i = 0; i < 18; i++) {
-                            const angle = (i / 18) * 180;
-                            document.write(`<div class="ring" style="transform: rotateY(${angle}deg)"></div>`);
-                        }
-                    </script><div class="ring" style="transform: rotateY(0deg)"></div><div class="ring" style="transform: rotateY(10deg)"></div><div class="ring" style="transform: rotateY(20deg)"></div><div class="ring" style="transform: rotateY(30deg)"></div><div class="ring" style="transform: rotateY(40deg)"></div><div class="ring" style="transform: rotateY(50deg)"></div><div class="ring" style="transform: rotateY(60deg)"></div><div class="ring" style="transform: rotateY(70deg)"></div><div class="ring" style="transform: rotateY(80deg)"></div><div class="ring" style="transform: rotateY(90deg)"></div><div class="ring" style="transform: rotateY(100deg)"></div><div class="ring" style="transform: rotateY(110.00000000000001deg)"></div><div class="ring" style="transform: rotateY(120deg)"></div><div class="ring" style="transform: rotateY(130deg)"></div><div class="ring" style="transform: rotateY(140deg)"></div><div class="ring" style="transform: rotateY(150deg)"></div><div class="ring" style="transform: rotateY(160deg)"></div><div class="ring" style="transform: rotateY(170deg)"></div>
-                </div>
-                <h1 class="title">LUKE MARKS</h1>
-                <div class="torus">
-                    <script>
-                        for (let i = 0; i < 18; i++) {
-                            const angle = (i / 18) * 180;
-                            document.write(`<div class="ring" style="transform: rotateY(${angle}deg)"></div>`);
-                        }
-                    </script><div class="ring" style="transform: rotateY(0deg)"></div><div class="ring" style="transform: rotateY(10deg)"></div><div class="ring" style="transform: rotateY(20deg)"></div><div class="ring" style="transform: rotateY(30deg)"></div><div class="ring" style="transform: rotateY(40deg)"></div><div class="ring" style="transform: rotateY(50deg)"></div><div class="ring" style="transform: rotateY(60deg)"></div><div class="ring" style="transform: rotateY(70deg)"></div><div class="ring" style="transform: rotateY(80deg)"></div><div class="ring" style="transform: rotateY(90deg)"></div><div class="ring" style="transform: rotateY(100deg)"></div><div class="ring" style="transform: rotateY(110.00000000000001deg)"></div><div class="ring" style="transform: rotateY(120deg)"></div><div class="ring" style="transform: rotateY(130deg)"></div><div class="ring" style="transform: rotateY(140deg)"></div><div class="ring" style="transform: rotateY(150deg)"></div><div class="ring" style="transform: rotateY(160deg)"></div><div class="ring" style="transform: rotateY(170deg)"></div>
-                </div>
-            </div>
+            <h1 class="title">LUKE MARKS</h1>
             <div class="description">
-                <p>This is the personal website of Luke Marks.</p>
-                <p>I am reachable at marksluke076[at]gmail[dot]com.</p>
+                <p>Email: marksluke076[at]gmail[dot]com.</p>
 
                 <h2 class="section-title">Publications</h2>
                 <ul>
@@ -128,6 +98,7 @@
                     <li>Received a grant from <a href="https://www.mercatus.org/emergent-ventures">Emergent Ventures</a> in 2024.</li>
                     <li>Dropped out of high school in 2024.</li>
                 </ul>
+
                 <h2 class="section-title">Interests</h2>
                 <ul>
                     <li>Deep learning theory</li>
@@ -137,10 +108,11 @@
                 
                 <h2 class="section-title">Projects</h2>
                 <ul>
-                    <li><a href="https://github.com/lyezene/BadTransformer">BadTransformer</a>: Simple transformer implemented with only NumPy and Python as dependencies.</li>
+                    <li><a href="https://github.com/lyezene/BadTransformer">BadTransformer</a>: Simple transformer with only NumPy and Python as dependencies.</li>
                 </ul>
             </div>
         </div>
     </div>
+</body>
+</html>
 
-</body></html>
