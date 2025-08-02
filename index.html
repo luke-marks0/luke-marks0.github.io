@@ -10,6 +10,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
         
+        :root {
+            --accent-color: #3c4f85; /* #1e3a8a (dark blue) #8d3148 (current red), #ca8a04 (deep yellow), #059669 (green), #7c3aed (purple), #dc2626 (bright red), #0891b2 (teal) */
+            --accent-color-hover: color-mix(in srgb, var(--accent-color) 80%, white 20%);
+            --accent-color-grid: color-mix(in srgb, var(--accent-color) 3%, transparent 97%);
+        }
+        
         body, html {
             margin: 0;
             padding: 0;
@@ -117,7 +123,7 @@
             font-family: 'Times New Roman', serif;
             font-weight: 700;
             text-transform: uppercase;
-            color: #8d3148;
+            color: var(--accent-color);
             font-size: 1.4em;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -136,7 +142,7 @@
             left: 0;
             width: 100%;
             height: 1px;
-            background-color: #8d3148;
+            background-color: var(--accent-color);
         }
         
         ul {
@@ -158,23 +164,23 @@
         }
         
         ul li:before {
-            content: '—';
+            content: '>';
             position: absolute;
             left: -20px;
-            color: #8d3148;
+            color: var(--accent-color);
         }
         
         a {
             color: #fffff4;
             text-decoration: none;
-            border-bottom: 1px solid #8d3148; /* Added dark red underline */
+            border-bottom: 1px solid var(--accent-color);
             padding-bottom: 1px;
             transition: all 0s;
         }
         
         a:hover {
-            color: #862641;
-            border-bottom-color: #862641; /* Darker red on hover */
+            color: var(--accent-color-hover);
+            border-bottom-color: var(--accent-color-hover);
         }
         
         .scene:before {
@@ -184,8 +190,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(rgba(134, 38, 65, 0.03) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(134, 38, 65, 0.03) 1px, transparent 1px);
+            background-image: linear-gradient(var(--accent-color-grid) 1px, transparent 1px),
+                              linear-gradient(90deg, var(--accent-color-grid) 1px, transparent 1px);
             background-size: 20px 20px;
             pointer-events: none;
             z-index: 1;
@@ -230,9 +236,9 @@
         <div class="content">
             <div class="eva-header">
                 <h1 class="eva-title title-small">LUKE</h1>
-		<h1 class="eva-title title-small">SAMUEL</h1>
+		<h1 class="eva-title title-small">SAMUEL</h1> 
                 <h1 class="eva-title title-large">MARKS</h1>
-                <div class="episode">DEEP LEARNING AND DEEP LEARNING ADJACENT THINGS</div>
+                <div class="episode">DEEP LEARNING AND AI SAFETY</div>
                 <div class="quote">Email: marksluke076[at]gmail[dot]com</div>
             </div>
 
@@ -241,9 +247,9 @@
             <div class="description">
                 <h2 class="section-title">Publications</h2>
                 <ul>
-                    <li><a href="https://www.arxiv.org/abs/2505.24535">Beyond Linear Steering: Unified Multi-Attribute Control for Language Models</a></li>
-                    <li><a href="https://arxiv.org/abs/2503.12730">TinySQL: A Progressive Text-to-SQL Dataset for Mechanistic Interpretability Research</a></li>
-                    <li><a href="https://arxiv.org/abs/2411.01220">Enhancing Neural Network Interpretability with Feature-Aligned Sparse Autoencoders</a></li>
+                    <li><a href="https://www.arxiv.org/abs/2505.24535">Multi-Attribute Control for Language Models</a></li>
+                    <li><a href="https://arxiv.org/abs/2503.12730">A Progressive Text-to-SQL Dataset for Mechanistic Interpretability Research</a></li>
+                    <li><a href="https://arxiv.org/abs/2411.01220">Feature-Aligned Sparse Autoencoders</a></li>
                     <li><a href="https://arxiv.org/abs/2310.08164">Interpreting Learned Feedback Patterns in Large Language Models</a> (NeurIPS 2024)</li>
                 </ul>
 
@@ -262,24 +268,6 @@
                     <li>Was a summer intern at the <a href="https://torrvision.com">Torr Vision Group</a> in 2024.</li>
                     <li>Was a research fellow at <a href="https://www.apartresearch.com">Apart Research</a> in 2023.</li>
                     <li>Became a <a href="https://www.non-trivial.org">Non-Trivial Fellow</a> in 2023.</li>
-                </ul>
-
-                <h2 class="section-title">Other</h2>
-                <ul>
-                    <li>Dropped out of high school in 2024.</li>
-                </ul>
-                
-                <h2 class="section-title">Interests</h2>
-                <ul>
-                    <li>Deep learning</li>
-                    <li>Mind uploading</li>
-                    <li>Homomorphic encryption</li>
-                </ul>
-                
-                <h2 class="section-title">Projects</h2>
-                <ul>
-                    <li><a href="https://github.com/luke-marks0/BadTransformer">BadTransformer</a>: Simple transformer with only NumPy and Python as dependencies.</li>
-                    <li><a href="https://github.com/luke-marks0/reward_hacking">Reward Hacking</a>: A replication of <a href="https://arxiv.org/abs/1811.06521">Ibarz et al.</a> In this project I implement common architectures in Deep RL from the time and try to replicate the reward hacking behaviors observed in the Atari game Hero.</li>
                 </ul>
             </div>
         </div>
